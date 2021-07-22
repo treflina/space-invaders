@@ -7,7 +7,7 @@ class Ship(Turtle):
         super().__init__()
         self.penup()
         self.shape("spaceship.gif")
-        self.x_move = 5
+        self.x_move = 15
         self.setposition(0, -320)
         self.move_speed = 6
 
