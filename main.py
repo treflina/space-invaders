@@ -13,14 +13,14 @@ from playsound import playsound
 screen = Screen()
 background_picture = Turtle()
 screen.setup(width=660, height=720)
-screen.bgpic("heaven2.gif")
+screen.bgpic("/media/heaven2.gif")
 screen.title("Space Invaders")
 
-screen.addshape(name="alien20.gif")
-screen.addshape(name="invader.gif")
-screen.addshape(name="invader2.gif")
-screen.addshape(name="spaceship.gif")
-screen.addshape(name="ufo.gif")
+screen.addshape(name="/media/alien20.gif")
+screen.addshape(name="/media/invader.gif")
+screen.addshape(name="/media/invader2.gif")
+screen.addshape(name="/media/spaceship.gif")
+screen.addshape(name="/media/ufo.gif")
 
 scoreboard = Scoreboard()
 lives = Lives()
@@ -121,7 +121,7 @@ def move_alien_bullets():
                 print("True")
         if is_collided_with_ship(a_bullet, ship):
             a_bullet.hideturtle()
-            playsound("explosion2.wav")
+            playsound("/media/explosion2.wav")
             lives.change_num_lives()
             lives.hideturtle()
             if lives.num_lives == 0:
@@ -207,7 +207,7 @@ while game_is_on:
         bullet.goto(bullet.xcor(), bullet.ycor() + 15)
         for alien1 in aliens.aliens_row3:
             if is_collided_with(bullet, alien1):
-                playsound("explosion1.wav")
+                playsound("/media/explosion1.wav")
                 scoreboard.increase_score(10)
                 nextbullet_can_go = True
                 bullet.hideturtle()
@@ -216,7 +216,7 @@ while game_is_on:
 
         for alien2 in aliens.aliens_row2:
             if is_collided_with(bullet, alien2):
-                playsound("explosion1.wav")
+                playsound("/media/explosion1.wav")
                 scoreboard.increase_score(20)
                 nextbullet_can_go = True
                 bullet.hideturtle()
@@ -225,7 +225,7 @@ while game_is_on:
 
         for alien3 in aliens.aliens_row1:
             if is_collided_with(bullet, alien3):
-                playsound("explosion1.wav")
+                playsound("/media/explosion1.wav")
                 scoreboard.increase_score(30)
                 nextbullet_can_go = True
                 bullet.hideturtle()
@@ -238,7 +238,7 @@ while game_is_on:
 
         if -350 < ufo.xcor() < 350 and ufo.xcor() != 0 and ufo.ycor() != 0:
             if is_collided_with_ufo(ufo, bullet) is True:
-                playsound("explosion1.wav")
+                playsound("/media/explosion1.wav")
                 scoreboard.increase_score(100)
                 nextbullet_can_go = True
                 bullet.hideturtle()

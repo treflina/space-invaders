@@ -20,7 +20,7 @@ class Aliens:
             x = num_x * 40
             self.alien = Turtle()
             self.alien.penup()
-            self.alien.shape("alien20.gif")
+            self.alien.shape("/media/alien20.gif")
             self.alien.goto(x, y_row1)
             self.alien.x_move = 4
             self.aliens_row1.append(self.alien)
@@ -28,7 +28,7 @@ class Aliens:
             x = num_x * 40
             self.alien = Turtle()
             self.alien.penup()
-            self.alien.shape("invader.gif")
+            self.alien.shape("/media/invader.gif")
             self.alien.goto(x, y_row2)
             self.alien.x_move = 4
             self.aliens_row2.append(self.alien)
@@ -36,7 +36,7 @@ class Aliens:
             x = num_x * 40
             self.alien = Turtle()
             self.alien.penup()
-            self.alien.shape("invader2.gif")
+            self.alien.shape("/media/invader2.gif")
             self.alien.goto(x, y_row3)
             self.alien.x_move = 4
             self.aliens_row3.append(self.alien)

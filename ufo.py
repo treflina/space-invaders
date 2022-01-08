@@ -9,7 +9,7 @@ class Ufo(Turtle):
         self.penup()
 
     def create_ufo(self):
-        self.shape("ufo.gif")
+        self.shape("/media/ufo.gif")
         self.setposition(-500, 300)
         self.setheading(0)
         self.penup()
